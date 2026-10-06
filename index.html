@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#efe8d8" />
+    <meta name="description" content="Tiny party games for a bunch of friends. Open a room, share the code, play. No sign-up." />
+    <title>Paper Party</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="/icons/favicon-64.png" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Paper Party" />
+    <meta property="og:title" content="Paper Party" />
+    <meta property="og:description" content="Tiny party games for a bunch of friends. Open a room, share the code, play." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      /* Shown while the JS downloads. */
+      html, body { height: 100%; margin: 0; background: #efe8d8; }
+      .splash { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; font-family: system-ui, sans-serif; color: #6b6878; font-size: 13px; letter-spacing: .15em; }
+      .splash img { width: 84px; height: 84px; border-radius: 22px; box-shadow: 0 10px 24px -12px rgba(35,33,46,.5); animation: bob 1s ease-in-out infinite; }
+      @keyframes bob { 50% { transform: translateY(-8px) rotate(-4deg); } }
+    </style>
+  </head>
+  <body>
+    <div id="root"><div class="splash"><img src="/icons/icon-192.png" alt="" />Loading…</div></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

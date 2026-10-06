@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* Landscape phones (short screens): put the controls on the right instead of below. */
+@custom-variant short (@media (orientation: landscape) and (max-height: 540px));
+
+@theme {
+  --color-paper: #fbf7ee;
+  --color-paper-2: #efe7d3;
+  --color-ink: #23212e;
+  --color-ink-soft: #6b6878;
+  --color-accent: #e8604c;
+  --color-accent-2: #2f9e95;
+  --color-gold: #f2c230;
+  /* The two-player games (ported from the original app) use side-l / side-r = seat 1 / seat 2. */
+  --color-side-l: #e8604c;
+  --color-side-r: #2f9e95;
+  --font-hand: "Klee One", "Noto Sans TC", system-ui, sans-serif;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+html, body, #root { height: 100%; }
+body {
+  background-color: #efe8d8;
+  background-image: radial-gradient(#d9d0bc 1px, transparent 1px);
+  background-size: 22px 22px;
+  color: var(--color-ink);
+  font-family: var(--font-hand);
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Visible focus for keyboard users only. */
+:focus-visible { outline: 3px solid color-mix(in srgb, var(--color-accent-2) 70%, transparent); outline-offset: 2px; border-radius: 12px; }
+input, textarea { -webkit-user-select: text; user-select: text; }
